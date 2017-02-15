@@ -1,8 +1,8 @@
 <div class="chartContainer" style="height:{{height}}px">
   <h5 class="chartName">{{chartName}} </h5>
   <div class="series" ng-repeat="bar in bars">
+    <div class="bars" ng-class="color($index)" style="width:{{bar.val / max * width}}px; height:{{height / count-20}}px;background-color:color($index)">
     <label class="chartSeries"> {{bar.label}}</label>
-    <div class="bars" style="width:{{bar.val / max * width}}px; height:{{height / count}}px; background-color:red">
       <label class="chartLabels"> {{bar.val}} </label>
     </div>
   </div>
